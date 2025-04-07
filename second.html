@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Photo and Video Frames</title>
+  <style>
+    /* General body styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #f0f0f0;
+      gap: 20px; /* Added gap for cleaner layout */
+      padding: 20px; /* Added padding for a more polished look */
+    }
+
+    /* Frame container styles */
+    .frame {
+      border: 5px solid #ddd;
+      border-radius: 8px; /* Added rounded corners for a more modern look */
+      overflow: hidden; /* Prevents overflow for rounded corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      background-color: #fff; /* Ensures background is clean */
+      width: 300px;
+      max-width: 100%;
+    }
+
+    /* Image and video styles */
+    .frame img, .frame video {
+      width: 100%;
+      height: auto;
+      display: block; /* Ensures no space below the media */
+    }
+
+    /* Accessible video controls styling */
+    video {
+      border-top: 5px solid #ddd;
+    }
+
+  </style>
+</head>
+<body>
+  <section aria-labelledby="media-section">
+    <h1 id="media-section" class="sr-only">Happy Birthday My Love</h1>
+
+    <div class="frame" aria-label="Photo Frame">
+      <img src="hbd.jpg" alt="A beautiful landscape">
+    </div>
+    
+    <div class="frame" aria-label="Video Frame">
+      <video controls>
+        <source src="Fathima Hannoh Reefath   Birthday.mp4" type="video/mp4">
+        <p>Your browser does not support the video tag.</p>
+      </video>
+    </div>
+  </section>
+</body>
+</html>
